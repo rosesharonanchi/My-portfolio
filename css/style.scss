@@ -324,7 +324,7 @@ html {
 .experience {
   background-color: var(--primary-color);
   width: 100%;
-  padding: 0 3em;
+  padding: 0 clamp(1rem, 5vw, 3rem);
 
   .container {
     max-width: 1400px;
@@ -334,18 +334,18 @@ html {
 
     h2 {
       font-weight: 600;
-      font-size: clamp(2.5em, 5vw, 3.5em);
+      font-size: clamp(1.8em, 5vw, 3.5em);
       text-align: center;
     }
     .experience_text {
-      font-size: clamp(1em, 3vw, 1.1em);
+     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
       font-weight: 500;
       margin-bottom: 1.5em;
     }
   }
 
   .firstExperience {
-    border: solid 2px var(--secondary-color);
+    // border: solid 2px var(--secondary-color);
     padding: 1em;
     margin-bottom: 1em;
 
@@ -396,7 +396,8 @@ html {
       gap: 2em;
       .card {
         border-radius: 2rem;
-        width: 546px;
+       width: 100%;
+    max-width: 546px;
         height: auto;
         background-color: var(--white);
         font-size: 0.8em;
@@ -437,7 +438,7 @@ html {
         }
         .image_box {
           width: 100%;
-          height: 312px;
+         height: clamp(200px, 40vw, 312px);
           border-radius: 2em;
           background-color: var(--primary-color);
           background-image: url("../assets/Rectangle 16.png");
@@ -609,6 +610,7 @@ html {
 .footer {
   background-color: var(--black);
   width: 100%;
+  padding: 0 4em;
   padding-top: 4em;
 
   .container {
@@ -723,6 +725,11 @@ html {
 //end of footer
 
 @media only screen and (max-width: 768px) {
+  .navbar{
+    ul{
+      display: none;
+    }
+  }
   .hero {
     .container {
       padding-top: 6em;
