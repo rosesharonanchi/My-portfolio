@@ -371,7 +371,7 @@ html {
 .project {
   background-color: var(--black);
   width: 100%;
-  padding: 2em 3em;
+ padding: 2em clamp(1rem, 5vw, 3rem);
 
   .container {
     max-width: 1400px;
@@ -391,9 +391,11 @@ html {
     }
     .cards {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2em;
+     justify-content: center;
+      flex-wrap: wrap;
+      align-items: stretch;
+     
+      gap: 1.5em;
       .card {
         border-radius: 2rem;
        width: 100%;
@@ -404,10 +406,10 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2em;
-        margin: 2em 0;
+        padding: clamp(1.2rem, 5vw, 2rem);
+        margin: 1em 0;
         * {
-          margin-top: 1em;
+          margin-top: .8em;
         }
         .project_description {
           text-align: center;
@@ -773,7 +775,7 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0 4em;
+        
       }
     }
   }
@@ -791,6 +793,15 @@ html {
       }
     }
   }
+.footer{
+    .container{
+      .top{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
