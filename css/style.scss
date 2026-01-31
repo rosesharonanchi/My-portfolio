@@ -338,7 +338,7 @@ html {
       text-align: center;
     }
     .experience_text {
-     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
       font-weight: 500;
       margin-bottom: 1.5em;
     }
@@ -371,7 +371,7 @@ html {
 .project {
   background-color: var(--black);
   width: 100%;
- padding: 2em clamp(1rem, 5vw, 3rem);
+  padding: 2em clamp(1rem, 5vw, 3rem);
 
   .container {
     max-width: 1400px;
@@ -391,15 +391,15 @@ html {
     }
     .cards {
       display: flex;
-     justify-content: center;
+      justify-content: center;
       flex-wrap: wrap;
       align-items: stretch;
-     
+
       gap: 1.5em;
       .card {
         border-radius: 2rem;
-       width: 100%;
-    max-width: 546px;
+        width: 100%;
+        max-width: 546px;
         height: auto;
         background-color: var(--white);
         font-size: 0.8em;
@@ -409,7 +409,7 @@ html {
         padding: clamp(1.2rem, 5vw, 2rem);
         margin: 1em 0;
         * {
-          margin-top: .8em;
+          margin-top: 0.8em;
         }
         .project_description {
           text-align: center;
@@ -438,21 +438,21 @@ html {
           font-size: clamp(2em, 4vw, 2.2em);
           line-height: 0.6em;
         }
-        .image_box1, .image_box2 {
+        .image_box1,
+        .image_box2 {
           width: 100%;
-         height: clamp(200px, 40vw, 312px);
+          height: clamp(200px, 40vw, 312px);
           border-radius: 2em;
           background-color: var(--primary-color);
-background-size: cover;
+          background-size: cover;
           background-repeat: no-repeat;
         }
-        .image_box1{
-
+        .image_box1 {
           background-image: url("../assets/Rectangle 16.png");
         }
-        .image_box2{
-
+        .image_box2 {
           background-image: url("../assets/image.png");
+          
         }
       }
     }
@@ -735,8 +735,8 @@ background-size: cover;
 //end of footer
 
 @media only screen and (max-width: 768px) {
-  .navbar{
-    ul{
+  .navbar {
+    ul {
       display: none;
     }
   }
@@ -783,7 +783,6 @@ background-size: cover;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
       }
     }
   }
@@ -801,15 +800,14 @@ background-size: cover;
       }
     }
   }
-.footer{
-    .container{
-      .top{
+  .footer {
+    .container {
+      .top {
         display: flex;
         flex-direction: column;
       }
     }
   }
-  
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
