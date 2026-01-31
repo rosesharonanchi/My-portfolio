@@ -438,13 +438,21 @@ html {
           font-size: clamp(2em, 4vw, 2.2em);
           line-height: 0.6em;
         }
-        .image_box {
+        .image_box1, .image_box2 {
           width: 100%;
          height: clamp(200px, 40vw, 312px);
           border-radius: 2em;
           background-color: var(--primary-color);
-          background-image: url("../assets/Rectangle 16.png");
+background-size: cover;
           background-repeat: no-repeat;
+        }
+        .image_box1{
+
+          background-image: url("../assets/Rectangle\ 16.png");
+        }
+        .image_box2{
+
+          background-image: url("../assets/image.png");
         }
       }
     }
