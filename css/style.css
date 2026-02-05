@@ -391,8 +391,9 @@ html {
   margin-top: 0.8em;
 }
 .project .container .cards .card .project_description {
-  text-align: center;
-  font-size: clamp(0.8em, 3vw, 1em);
+  text-align: justify;
+  font-size: clamp(0.9em, 3vw, 1.5em);
+  padding: 10px 0;
 }
 .project .container .cards .card .view_more {
   background-color: var(--primary-color);
@@ -425,6 +426,82 @@ html {
   background-color: var(--primary-color);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.project .container .cards .card .image_box1::before,
+.project .container .cards .card .image_box2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 21, 21, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.project .container .cards .card .image_box1:hover,
+.project .container .cards .card .image_box2:hover {
+  border: 2px solid black;
+}
+.project .container .cards .card .image_box1:hover::before,
+.project .container .cards .card .image_box2:hover::before {
+  opacity: 1;
+}
+.project .container .cards .card .image_box1:hover .live-demo-button,
+.project .container .cards .card .image_box2:hover .live-demo-button {
+  display: flex;
+  animation: 1s linear rise;
+}
+.project .container .cards .card .image_box1 .live-demo-button,
+.project .container .cards .card .image_box2 .live-demo-button {
+  position: absolute;
+  border-radius: 10px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.project .container .cards .card .image_box1 .live-demo-button a,
+.project .container .cards .card .image_box2 .live-demo-button a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+.project .container .cards .card .image_box1 .live-demo-button::before,
+.project .container .cards .card .image_box2 .live-demo-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s ease;
+  z-index: 1;
+}
+.project .container .cards .card .image_box1 .live-demo-button:hover,
+.project .container .cards .card .image_box2 .live-demo-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.project .container .cards .card .image_box1 .live-demo-button:hover::before,
+.project .container .cards .card .image_box2 .live-demo-button:hover::before {
+  transform: scaleY(1);
+}
+.project .container .cards .card .image_box1 .live-demo-button:hover a,
+.project .container .cards .card .image_box2 .live-demo-button:hover a {
+  color: white;
 }
 .project .container .cards .card .image_box1 {
   background-image: url("../assets/Rectangle 16.png");
@@ -550,13 +627,13 @@ html {
 .footer .container .top .footer_left h2 {
   font-family: "Corinthia", cursive;
   color: var(--white);
-  font-size: 3.5rem; /* Made larger for impact */
+  font-size: 4rem; /* Made larger for impact */
   margin-bottom: 0.5rem;
 }
 .footer .container .top .footer_left p {
   color: var(--grey);
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .footer .container .top .footer_right {
   flex: 1;
@@ -570,7 +647,7 @@ html {
   gap: 3em;
 }
 .footer .container .top .footer_right .top_wrapper h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--white);
   margin-bottom: 1.5rem;
@@ -587,7 +664,7 @@ html {
   text-decoration: none;
   color: var(--grey);
   transition: color 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 .footer .container .top .footer_right .top_wrapper ul li a:hover {
   color: var(--primary-color);
@@ -741,5 +818,15 @@ html {
 @media only screen and (min-width: 1025px) {
   .form__part {
     margin-top: 6em;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }/*# sourceMappingURL=style.css.map */
